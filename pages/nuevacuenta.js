@@ -62,7 +62,7 @@ const NuevaCuenta = () => {
           }
         })
 
-        console.log(data)
+        // console.log(data)
 
         // Usuario Creado correctamente
         guardarMensaje(`Se creo correctamente el Usuario: ${data.nuevoUsuario.nombre}`)
@@ -77,7 +77,7 @@ const NuevaCuenta = () => {
 
       } catch (error) {
         guardarMensaje(error.message.replace('GraphQL error: ', ''));
-        console.log(error.message)
+        // console.log(error.message)
       }
     }
   })

@@ -20,9 +20,9 @@ const Header = () => {
   // Query Apollo
   const { data, loading, error} = useQuery(OBETNER_USUARIO)
 
-  console.log(data)
-  console.log(loading)
-  console.log(error)
+  // console.log(data)
+  // console.log(loading)
+  // console.log(error)
 
   // Proteger que no accedamos a data antes de tener resultados
 

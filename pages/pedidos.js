@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 
-const Pedidos = () => {
+const Productos = () => {
   return (
     <div>
       <Layout>
@@ -11,4 +11,4 @@ const Pedidos = () => {
   )
 }
 
-export default Pedidos
+export default Productos

@@ -18,6 +18,7 @@ const Login = () => {
   // Routing
   const router = useRouter()
 
+  // Mensajes
   const [mensaje, guardarMensaje] = useState()
 
   // Mutation para crear nuevos usuarios en apollo
@@ -49,7 +50,7 @@ const Login = () => {
           }
         })
 
-        console.log(data)
+        // console.log(data)
         guardarMensaje('Autenticando...')
 
         // Guardar el token en localStorege
