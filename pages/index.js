@@ -1,23 +1,11 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Cliente from '../components/Cliente'
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const OBTENER_CLIENTES_USUARIO = gql`
-  query obtenerClientesVendedor {
-    obtenerClientesVendedor {
-      id
-      nombre
-      apellido
-      empresa
-      email
-      telefono
-      vendedor
-    }
-  }
-`
+import { OBTENER_CLIENTES_USUARIO } from '../schemas'
 
 const Index = () => {
 
@@ -57,6 +45,7 @@ const Index = () => {
               <th className="w-1/5 py-2">Nombre</th>
               <th className="w-1/5 py-2">Empresa</th>
               <th className="w-1/5 py-2">Email</th>
+              <th className="w-1/5 py-2">Editar</th>
               <th className="w-1/5 py-2">Eliminar</th>
             </tr>
           </thead>

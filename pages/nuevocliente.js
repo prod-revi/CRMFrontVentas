@@ -3,35 +3,10 @@ import Layout from '../components/Layout'
 import Input from '../components/form/Input'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { gql, useMutation } from '@apollo/client'
+import { useMutation } from '@apollo/client'
 import { useRouter } from 'next/router'
 
-const NUEVO_CLIENTE = gql`
-  mutation nuevoCliente($input: ClienteInput) {
-    nuevoCliente(input: $input) {
-      id
-      nombre
-      apellido
-      empresa
-      email
-      telefono
-    }
-  }
-`
-
-const OBTENER_CLIENTES_USUARIO = gql`
-  query obtenerClientesVendedor {
-    obtenerClientesVendedor {
-      id
-      nombre
-      apellido
-      empresa
-      email
-      telefono
-      vendedor
-    }
-  }
-`
+import { NUEVO_CLIENTE, OBTENER_CLIENTES_USUARIO } from '../schemas'
 
 const NuevoCliente = () => {
 

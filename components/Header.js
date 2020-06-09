@@ -1,16 +1,8 @@
 import React from 'react';
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import { useRouter } from 'next/router'
 
-const OBETNER_USUARIO = gql`
-  query obtenerUsuario {
-    obtenerUsuario {
-      id
-      nombre
-      apellido
-    }
-  }
-`
+import { OBETNER_USUARIO } from '../schemas'
 
 const Header = () => {
 
