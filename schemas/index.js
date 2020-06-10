@@ -57,6 +57,28 @@ const OBTENER_CLIENTES_USUARIO = gql`
   }
 `
 
+const OBTENER_CLIENTE = gql`
+  query obtenerCliente($id: ID!) {
+    obtenerCliente(id: $id) {
+      nombre
+      apellido
+      empresa
+      email
+      telefono
+      vendedor
+    }
+  }
+`
+
+const ACTUALIZAR_CLIENTE = gql`
+  mutation actualizarCliente($id: ID!, $input: ClienteInput) {
+    actualizarCliente(id: $id, input: $input) {
+      nombre
+      email
+    }
+}
+`
+
 const ELIMINAR_CLIENTE = gql`
   mutation eliminarCliente($id: ID!) {
     eliminarCliente(id: $id)
@@ -69,5 +91,7 @@ export {
   NUEVO_CLIENTE,
   NUEVA_CUENTA,
   OBTENER_CLIENTES_USUARIO,
+  OBTENER_CLIENTE,
+  ACTUALIZAR_CLIENTE,
   ELIMINAR_CLIENTE
 }

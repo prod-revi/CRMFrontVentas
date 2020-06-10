@@ -28,6 +28,8 @@ const Index = () => {
     return router.push('/login')
   }
 
+  if (error) return null
+
   return (
     <div>
       <Layout>
