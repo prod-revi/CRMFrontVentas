@@ -85,6 +85,60 @@ const ELIMINAR_CLIENTE = gql`
   }
 `
 
+const NUEVO_PRODUCTO = gql`
+  mutation nuevoProducto($input: ProductoInput) {
+    nuevoProducto(input: $input) {
+      id
+      nombre
+      existencia
+      precio
+      creado
+    }
+  }
+`
+
+const OBTENER_PRODUCTOS = gql`
+  query obtenerProductos {
+    obtenerProductos {
+      id
+      nombre
+      precio
+      existencia
+      creado
+    }
+  }
+`
+
+const OBTENER_PRODUCTO = gql`
+  query obtenerProducto($id: ID!) {
+    obtenerProducto(id: $id) {
+      id
+      nombre
+      existencia
+      precio
+      creado
+    }
+  }
+`
+
+const ACTUALIZAR_PRODUCTO = gql`
+  mutation actualizarProducto($id: ID!, $input: ProductoInput) {
+    actualizarProducto(id: $id, input: $input) {
+      id
+      nombre
+      existencia
+      precio
+      creado
+    }
+  }
+`
+
+const ELEMINAR_PRODUCTO = gql`
+  mutation eliminarProducto($id: ID!) {
+    eliminarProducto(id: $id)
+  }
+`
+
 export {
   AUTENTICAR_USUARIO,
   OBETNER_USUARIO,
@@ -93,5 +147,10 @@ export {
   OBTENER_CLIENTES_USUARIO,
   OBTENER_CLIENTE,
   ACTUALIZAR_CLIENTE,
-  ELIMINAR_CLIENTE
+  ELIMINAR_CLIENTE,
+  NUEVO_PRODUCTO,
+  OBTENER_PRODUCTOS,
+  OBTENER_PRODUCTO,
+  ACTUALIZAR_PRODUCTO,
+  ELEMINAR_PRODUCTO
 }

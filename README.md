@@ -33,5 +33,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Info
 
 Alerts : [Sweet Alert 2](https://sweetalert2.github.io/#download)
+Alertas de la aplicacion
 
 Icons : [Hero Icons](https://heroicons.dev)
+Iconos de la aplicacion
+
+Yup : [Yup](https://github.com/jquense/yup)
+Verificacion de schemas.. 
