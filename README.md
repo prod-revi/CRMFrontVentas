@@ -40,3 +40,5 @@ Iconos de la aplicacion
 
 Yup : [Yup](https://github.com/jquense/yup)
 Verificacion de schemas.. 
+
+React Select : [React Select](https://react-select.com/)
