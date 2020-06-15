@@ -11,12 +11,11 @@ import PedidoContext from '../../context/pedidos/PedidoContext'
 // ]
 
 const AsignarCliente = () => {
+  // state local cliente
   const [ client, setClient ] = useState([])
-
   // Context de pedidos
   const pedidoContext = useContext(PedidoContext)
   const { agregarCliente } = pedidoContext
-
   // Consutlar a la base de datos para los clientes
   const { data, loading, error } =  useQuery(OBTENER_CLIENTES_USUARIO)
 
@@ -39,7 +38,7 @@ const AsignarCliente = () => {
     <>
       <p 
         className="mt-10 my-2 bg-white border-l-4 border-gray-800 text-gray-700 p-2 text-sm font-bold"
-      > Asigna un cliente al pedido </p>
+      >1. Asigna un cliente al pedido </p>
       <Select
         className="mt-3"
         options={obtenerClientesVendedor}
