@@ -147,6 +147,50 @@ const NUEVO_PEDIDO = gql`
   }
 `
 
+const OBTENER_PEDIDOS_VENDEDOR = gql`
+  query obtenerPedidosVendedor {
+    obtenerPedidosVendedor {
+      id
+      pedido {
+        id
+        cantidad
+        nombre
+      }
+      cliente {
+        id
+        nombre
+        apellido
+        email
+        telefono
+      }
+      vendedor
+      total
+      estado
+    }
+  }
+`
+const OBTENER_PEDIDOS_VENDEDOR_ID = gql`
+  query obtenerPedidosVendedor {
+    obtenerPedidosVendedor {
+      id
+    }
+  }
+`
+
+const ACTUALIZAR_PEDIDO = gql`
+  mutation actualizarPedido($id: ID!, $input: PedidoInput) {
+    actualizarPedido(id: $id, input: $input) {
+      estado
+    }
+  }
+`
+
+const ELIMINAR_PEDIDO = gql`
+  mutation eliminarPedido($id: ID!) {
+    eliminarPedido(id: $id)
+  }
+`
+
 export {
   AUTENTICAR_USUARIO,
   OBETNER_USUARIO,
@@ -161,5 +205,9 @@ export {
   OBTENER_PRODUCTO,
   ACTUALIZAR_PRODUCTO,
   ELEMINAR_PRODUCTO,
-  NUEVO_PEDIDO
+  NUEVO_PEDIDO,
+  OBTENER_PEDIDOS_VENDEDOR,
+  OBTENER_PEDIDOS_VENDEDOR_ID,
+  ACTUALIZAR_PEDIDO,
+  ELIMINAR_PEDIDO
 }
