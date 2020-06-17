@@ -191,6 +191,30 @@ const ELIMINAR_PEDIDO = gql`
   }
 `
 
+const MEJORES_VENDEDORES = gql`
+  query mejoresVendedores {
+    mejoresVendedores {
+      vendedor {
+        nombre
+        email
+      }
+      total
+    }
+  }
+`
+
+const MEJORES_CLIENTES = gql`
+  query mejoresClientes {
+    mejoresClientes {
+      cliente {
+        nombre
+        empresa
+      }
+      total
+    }
+  }
+`
+
 export {
   AUTENTICAR_USUARIO,
   OBETNER_USUARIO,
@@ -209,5 +233,7 @@ export {
   OBTENER_PEDIDOS_VENDEDOR,
   OBTENER_PEDIDOS_VENDEDOR_ID,
   ACTUALIZAR_PEDIDO,
-  ELIMINAR_PEDIDO
+  ELIMINAR_PEDIDO,
+  MEJORES_VENDEDORES,
+  MEJORES_CLIENTES
 }
